@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Azael Fajardo - Software Engineer & IT Systems expert">
     <title>Azael Fajardo | Software Engineer</title>
-    
+
     <!-- Fonts: Cinzel for Headings, Montserrat for Body/UI -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+
     <!-- CSS Modules -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -24,13 +24,13 @@
             <div class="nav-brand">
                 Azael Fajardo
             </div>
-            
-            <ul class="nav-menu">
-                <li><a class="nav-link active" data-target="about-view">About</a></li>
-                <li><a class="nav-link disabled" data-target="">Experience</a></li>
-                <li><a class="nav-link disabled" data-target="">Projects</a></li>
-                <li><a class="nav-link disabled" data-target="">Expertise</a></li>
-            </ul>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+                <a class="nav-link active" href="#about">About</a>
+                <a class="nav-link" href="#experience">Experience</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#expertise">Expertise</a>
+            </nav>
 
             <div class="nav-actions">
                 <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
@@ -44,31 +44,154 @@
         </div>
     </header>
 
-    <div class="main-content">
-        <!-- About View (Only active view for now) -->
-        <section class="spa-view active-view" id="about-view">
-            <div class="hero-section container">
+    <main class="main-content">
+        <!-- About / Hero -->
+        <section id="about" class="section hero-section">
+            <div class="container">
                 <div class="hero-subtitle">Software Engineer</div>
-                
-                <h1 class="hero-title">
-                    Building Resilient &<br>Scalable Architectures
-                </h1>
-                
+
+                <h1 class="hero-title">Building Systems That Work</h1>
+
                 <p class="hero-lead">
-                    I am Azael Fajardo. 7th-semester Computer Systems Engineering student with 
-                    hands-on experience in software development, artificial intelligence, automation, 
-                    backend development, and Linux infrastructure. Turning complex enterprise 
+                    I am Azael Fajardo. 7th-semester Computer Systems Engineering student with
+                    hands-on experience in software development, artificial intelligence, automation,
+                    backend development, and Linux infrastructure. Turning complex enterprise
                     problems into elegant, high-performance solutions.
                 </p>
-                
+
                 <div class="hero-actions">
-                    <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download Resume</a>
-                    <a href="https://github.com/AzaelFajardo" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com/in/angel-azael-fajardo-espino-850b8642b/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="icon-btn icon-resume" target="_blank" rel="noopener noreferrer" aria-label="Download Resume" data-tooltip="Download Resume">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                    <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/angel-azael-fajardo-espino-850b8642b/" class="icon-btn icon-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="LinkedIn">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                    </a>
                 </div>
             </div>
         </section>
-    </div>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <span class="section-kicker">Career Path</span>
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">Designing, shipping, and operating resilient systems across research and production environments.</p>
+                </div>
+
+                <div class="experience-carousel">
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Previous">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="experience-track" id="experience-track">
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-heading">
+                                <h3 class="exp-role">Developer · Researcher</h3>
+                                <span class="exp-company">Universidad Autónoma de Aguascalientes</span>
+                            </div>
+                            <span class="exp-date">Jan 2026 — Present</span>
+                        </div>
+                        <p class="exp-desc">Building a distributed-systems simulation environment to study performance, resilience, and chaos engineering.</p>
+                        <ul class="exp-list">
+                            <li>Design simulation components that execute and control distributed processes.</li>
+                            <li>Run containerized experiments with Docker &amp; Kubernetes, including chaos-engineering tests.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Distributed Systems</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Chaos Engineering</span>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-heading">
+                                <h3 class="exp-role">Infrastructure Lead</h3>
+                                <span class="exp-company">Chavonauta</span>
+                            </div>
+                            <span class="exp-date">Sep 2025 — Present</span>
+                        </div>
+                        <p class="exp-desc">Leading self-hosted infrastructure and software for a production business serving real customers.</p>
+                        <ul class="exp-list">
+                            <li>Architected a dedicated Linux server running Docker, DNS, reverse proxies, and firewalls.</li>
+                            <li>Ship production apps (INVITACIONES, CHATBOTNAUTA) and Nextcloud, exposed securely via Cloudflare Tunnel.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Linux</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Cloudflare Tunnel</span>
+                            <span class="tag">Nextcloud</span>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-heading">
+                                <h3 class="exp-role">Sous Chef</h3>
+                                <span class="exp-company">La Chilaquileria</span>
+                            </div>
+                            <span class="exp-date">Jan 2024 — Jan 2025</span>
+                        </div>
+                        <p class="exp-desc">Promoted from dishwasher to Sous Chef through consistent performance and leadership.</p>
+                        <ul class="exp-list">
+                            <li>Coordinated the kitchen team and supervised daily operations.</li>
+                            <li>Sustained service quality and continuity under high-pressure demand.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Team Leadership</span>
+                            <span class="tag">Operations</span>
+                        </div>
+                    </article>
+                    </div>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Next">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Portfolio</span>
+                    <h2 class="section-title">Projects</h2>
+                </div>
+                <p class="section-placeholder">Selected work will be showcased here shortly.</p>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section id="expertise" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Toolbox</span>
+                    <h2 class="section-title">Expertise</h2>
+                </div>
+                <p class="section-placeholder">Technical competencies will be detailed here shortly.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <span class="footer-brand">Azael Fajardo</span>
+            <div class="footer-social">
+                <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/angel-azael-fajardo-espino-850b8642b/" class="icon-btn icon-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="LinkedIn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Azael Fajardo. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Sakura Background SVG (Bottom Right, from TAKARA) -->
     <div class="sakura-container">
@@ -77,7 +200,7 @@
             <path d="M220 180 C 180 150, 150 120, 100 100 C 80 85, 50 75, 10 50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
             <path d="M150 120 C 130 90, 100 70, 70 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
             <path d="M100 100 C 80 120, 50 130, 20 140" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
-            
+
             <!-- Main flowers -->
             <g fill="currentColor" opacity="0.8">
                 <circle cx="100" cy="100" r="3.5" />
@@ -88,7 +211,7 @@
                 <circle cx="160" cy="70" r="3.5" />
                 <circle cx="10" cy="50" r="2" />
             </g>
-            
+
             <!-- Falling petals -->
             <g fill="currentColor" opacity="0.5">
                 <path d="M 40 20 Q 42 17 45 20 Q 42 23 40 20 Z" />

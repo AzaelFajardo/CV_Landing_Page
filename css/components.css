@@ -69,16 +69,158 @@
   box-shadow: var(--glow-gold);
 }
 
-/* Experience Cards */
-.experience-grid {
+/* Icon Buttons (Resume / GitHub / LinkedIn) */
+.icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all var(--transition-normal);
+}
+
+.icon-btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Tooltip label */
+.icon-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  background: var(--tooltip-bg, var(--bg-surface-3));
+  color: var(--tooltip-fg, var(--text-primary));
+  border: 1px solid var(--tooltip-border, var(--border-subtle));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  z-index: 20;
+}
+
+.icon-btn::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  border: 5px solid transparent;
+  border-top-color: var(--tooltip-border, var(--border-subtle));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  z-index: 20;
+}
+
+.icon-btn:hover::after,
+.icon-btn:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Variant accent colors & glows */
+.icon-btn.icon-resume {
+  --tooltip-bg: var(--accent-gold);
+  --tooltip-fg: #000000;
+  --tooltip-border: var(--accent-gold);
+}
+
+.icon-btn.icon-github {
+  --tooltip-bg: var(--accent-purple);
+  --tooltip-fg: #ffffff;
+  --tooltip-border: var(--accent-purple);
+}
+
+.icon-btn.icon-linkedin {
+  --tooltip-bg: var(--accent-blue);
+  --tooltip-fg: #ffffff;
+  --tooltip-border: var(--accent-blue);
+}
+
+.icon-btn.icon-resume:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: var(--glow-gold), inset 0 0 12px rgba(212, 175, 55, 0.15);
+  transform: translateY(-2px);
+}
+
+.icon-btn.icon-github:hover {
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
+  box-shadow: var(--glow-purple), inset 0 0 12px rgba(139, 92, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.icon-btn.icon-linkedin:hover {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  box-shadow: var(--glow-blue), inset 0 0 12px rgba(10, 102, 194, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Experience Cards Carousel */
+.experience-carousel {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  max-width: 800px;
+  align-items: stretch;
+  gap: var(--spacing-md);
   margin: 0 auto;
 }
 
+.experience-track {
+  flex: 1 1 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* Static for now: hide the controls until more cards are added */
+.carousel-btn {
+  display: none;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-secondary);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.carousel-btn:hover:not(:disabled) {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: var(--glow-gold);
+  transform: translateY(-2px);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+}
+
 .exp-card {
+  min-width: 0;
   background: var(--bg-surface-1);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md); /* Subtle border radius requested */
@@ -86,6 +228,8 @@
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .exp-card::before {
@@ -102,7 +246,7 @@
 
 .exp-card:hover {
   border-color: var(--accent-gold);
-  transform: translateX(4px);
+  transform: translateY(-4px);
   box-shadow: var(--glow-gold);
 }
 
@@ -148,7 +292,86 @@
   color: var(--text-secondary);
   font-size: 0.95rem;
   margin-top: var(--spacing-md);
-  /* Regular case for long form text */
+  line-height: 1.7;
+}
+
+.exp-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.exp-list {
+  list-style: none;
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.exp-list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.exp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  opacity: 0.7;
+  transition: opacity var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.exp-card:hover .exp-list li::before {
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+}
+
+.tag {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: var(--bg-surface-2);
+  transition: all var(--transition-normal);
+}
+
+.exp-card:hover .tag {
+  border-color: rgba(212, 175, 55, 0.35);
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .experience-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-track {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Skills Honeycomb Grid */

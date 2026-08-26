@@ -21,10 +21,18 @@
   /* Accent & Brand Colors */
   --accent-gold: #D4AF37;
   --accent-gold-hover: #b8972e;
-  
+
+  /* Social Brand Accents */
+  --accent-purple: #8B5CF6;
+  --accent-blue: #0A66C2;
+
   /* Gradients & Glows */
   --glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
   --glow-gold-hover: 0 0 30px rgba(212, 175, 55, 0.5);
+  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.45);
+  --glow-purple-hover: 0 0 28px rgba(139, 92, 246, 0.6);
+  --glow-blue: 0 0 20px rgba(10, 102, 194, 0.45);
+  --glow-blue-hover: 0 0 28px rgba(10, 102, 194, 0.6);
 
   /* Typography */
   --font-serif: 'Cinzel', serif;
