@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Azael Fajardo - Software Engineer & IT Systems expert">
+    <title>Azael Fajardo | Software Engineer</title>
+    
+    <!-- Fonts: Cinzel for Headings, Montserrat for Body/UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                Azael Fajardo
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a class="nav-link active" data-target="about-view">About</a></li>
+                <li><a class="nav-link disabled" data-target="">Experience</a></li>
+                <li><a class="nav-link disabled" data-target="">Projects</a></li>
+                <li><a class="nav-link disabled" data-target="">Expertise</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                    <!-- Sun Icon -->
+                    <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <!-- Moon Icon -->
+                    <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- About View (Only active view for now) -->
+        <section class="spa-view active-view" id="about-view">
+            <div class="hero-section container">
+                <div class="hero-subtitle">Software Engineer</div>
+                
+                <h1 class="hero-title">
+                    Building Resilient &<br>Scalable Architectures
+                </h1>
+                
+                <p class="hero-lead">
+                    I am Azael Fajardo. 7th-semester Computer Systems Engineering student with 
+                    hands-on experience in software development, artificial intelligence, automation, 
+                    backend development, and Linux infrastructure. Turning complex enterprise 
+                    problems into elegant, high-performance solutions.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download Resume</a>
+                    <a href="https://github.com/AzaelFajardo" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com/in/angel-azael-fajardo-espino-850b8642b/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sakura Background SVG (Bottom Right, from TAKARA) -->
+    <div class="sakura-container">
+        <svg width="600" height="600" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main asymmetric branch (bonsai style) -->
+            <path d="M220 180 C 180 150, 150 120, 100 100 C 80 85, 50 75, 10 50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
+            <path d="M150 120 C 130 90, 100 70, 70 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+            <path d="M100 100 C 80 120, 50 130, 20 140" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+            
+            <!-- Main flowers -->
+            <g fill="currentColor" opacity="0.8">
+                <circle cx="100" cy="100" r="3.5" />
+                <circle cx="70" cy="40" r="2.5" />
+                <circle cx="20" cy="140" r="3" />
+                <circle cx="50" cy="80" r="4" />
+                <circle cx="130" cy="140" r="2.5" />
+                <circle cx="160" cy="70" r="3.5" />
+                <circle cx="10" cy="50" r="2" />
+            </g>
+            
+            <!-- Falling petals -->
+            <g fill="currentColor" opacity="0.5">
+                <path d="M 40 20 Q 42 17 45 20 Q 42 23 40 20 Z" />
+                <path d="M 80 10 Q 82 7 85 10 Q 82 13 80 10 Z" />
+                <path d="M 120 40 Q 123 37 125 40 Q 123 43 120 40 Z" />
+                <path d="M 10 100 Q 12 97 15 100 Q 12 103 10 100 Z" />
+                <path d="M 30 180 Q 32 177 35 180 Q 32 183 30 180 Z" />
+                <path d="M 160 100 Q 163 97 165 100 Q 163 103 160 100 Z" />
+                <path d="M 90 160 Q 92 157 95 160 Q 92 163 90 160 Z" />
+            </g>
+        </svg>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

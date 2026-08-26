@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Components Design System (Zen Luxury Edition)
+   ========================================================================== */
+
+/* Buttons (Zen UI Text) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0.8rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent-gold);
+  color: #000000;
+  border: 1px solid var(--accent-gold);
+  box-shadow: var(--glow-gold);
+}
+
+.btn-primary:hover {
+  background: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+  box-shadow: var(--glow-gold-hover);
+  transform: translateY(-2px);
+  color: #000000;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-icon:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: var(--glow-gold);
+}
+
+/* Experience Cards */
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.exp-card {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md); /* Subtle border radius requested */
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent-gold);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.exp-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateX(4px);
+  box-shadow: var(--glow-gold);
+}
+
+.exp-card:hover::before {
+  opacity: 1;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.exp-role {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.exp-company {
+  color: var(--accent-gold);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.exp-date {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.exp-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: var(--spacing-md);
+  /* Regular case for long form text */
+}
+
+/* Skills Honeycomb Grid */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+.honeycomb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hex {
+  position: relative;
+  width: 140px;
+  height: 160px;
+  margin: -10px 5px; /* Negative margin to interlock */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: var(--bg-surface-2);
+  transition: all var(--transition-normal);
+  cursor: default;
+}
+
+.hex-inner {
+  position: absolute;
+  inset: 2px; /* Subtle border thickness */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: var(--bg-surface-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 2;
+}
+
+.hex::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--border-subtle);
+  z-index: 1;
+  transition: background var(--transition-normal);
+}
+
+.hex:hover {
+  transform: translateY(-5px);
+}
+
+.hex:hover::before {
+  background: var(--accent-gold);
+}
+
+.hex:hover .hex-inner {
+  box-shadow: inset 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+.hex-icon {
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+.hex:hover .hex-icon {
+  color: var(--accent-gold);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+}
+
+.hex-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-primary);
+}
+
+/* Adjust rows to interlock nicely */
+.honeycomb::before {
+  content: "";
+  width: calc(140px / 2 + 5px);
+  float: left;
+  height: 100%;
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(160px - 20px),
+    #000 0 160px
+  );
+}
+
+/* Fallback simple grid if shape-outside doesn't work perfectly in all browsers */
+@supports not (clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)) {
+  .hex {
+    clip-path: none;
+    border-radius: var(--radius-md);
+    margin: 10px;
+    border: 1px solid var(--border-subtle);
+  }
+  .hex-inner {
+    clip-path: none;
+    inset: 0;
+  }
+}
