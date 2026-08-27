@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Azael Fajardo - Software Engineer & IT Systems expert">
+    <title>Azael Fajardo | Software Engineer</title>
+
+    <!-- Fonts: Cinzel for Headings, Montserrat for Body/UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                Azael Fajardo
+            </div>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+                <a class="nav-link active" href="#about">About</a>
+                <a class="nav-link disabled" href="#experience">Experience</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#expertise">Expertise</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-icon" aria-label="Toggle Language" style="font-weight: 600; font-size: 0.85rem; padding: 0.5rem; min-width: 40px;">
+                    EN
+                </button>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                    <!-- Sun Icon -->
+                    <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <!-- Moon Icon -->
+                    <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="#" class="btn btn-nav-resume">View Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- About / Hero -->
+        <section id="about" class="section hero-section">
+            <div class="container">
+                <div class="hero-subtitle">Software Engineer</div>
+
+                <h1 class="hero-title">Building Systems That Work</h1>
+
+                <p class="hero-lead">
+                    I am Azael Fajardo. 7th-semester Computer Systems Engineering student with
+                    hands-on experience in software development, artificial intelligence, automation,
+                    backend development, and Linux infrastructure. Turning complex enterprise
+                    problems into elegant, high-performance solutions.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#" class="icon-btn icon-resume" aria-label="Download Resume" data-tooltip="Download Resume">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                    <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/angel-azael-fajardo-espino-850b8642b/" class="icon-btn icon-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="LinkedIn">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <span class="section-kicker">Career Path</span>
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">Designing, shipping, and operating resilient systems across research and production environments.</p>
+                </div>
+
+                <div class="experience-carousel">
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Previous">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="experience-track" id="experience-track">
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-heading">
+                                <h3 class="exp-role">Developer · Researcher</h3>
+                                <span class="exp-company">Universidad Autónoma de Aguascalientes</span>
+                            </div>
+                            <span class="exp-date">Jan 2026 — Present</span>
+                        </div>
+                        <p class="exp-desc">Building a distributed-systems simulation environment to study performance, resilience, and chaos engineering.</p>
+                        <ul class="exp-list">
+                            <li>Design simulation components that execute and control distributed processes.</li>
+                            <li>Run containerized experiments with Docker &amp; Kubernetes, including chaos-engineering tests.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Distributed Systems</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Chaos Engineering</span>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-heading">
+                                <h3 class="exp-role">Infrastructure Lead</h3>
+                                <span class="exp-company">Chavonauta</span>
+                            </div>
+                            <span class="exp-date">Sep 2025 — Present</span>
+                        </div>
+                        <p class="exp-desc">Leading self-hosted infrastructure and software for a production business serving real customers.</p>
+                        <ul class="exp-list">
+                            <li>Architected a dedicated Linux server running Docker, DNS, reverse proxies, and firewalls.</li>
+                            <li>Ship production apps (INVITACIONES, CHATBOTNAUTA) and Nextcloud, exposed securely via Cloudflare Tunnel.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Linux</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Cloudflare Tunnel</span>
+                            <span class="tag">Nextcloud</span>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-heading">
+                                <h3 class="exp-role">Sous Chef</h3>
+                                <span class="exp-company">La Chilaquileria</span>
+                            </div>
+                            <span class="exp-date">Jan 2024 — Jan 2025</span>
+                        </div>
+                        <p class="exp-desc">Promoted from dishwasher to Sous Chef through consistent performance and leadership.</p>
+                        <ul class="exp-list">
+                            <li>Coordinated the kitchen team and supervised daily operations.</li>
+                            <li>Sustained service quality and continuity under high-pressure demand.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Team Leadership</span>
+                            <span class="tag">Operations</span>
+                        </div>
+                    </article>
+                    </div>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Next">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: ARGOS -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">A.R.G.O.S.</h3>
+                            <p class="project-subtitle">AI Multi-Agent Personal Assistant</p>
+                            <p class="project-desc">Multi-agent AI system with a multi-provider LLM router, long-term memory via RAG & embeddings, and remote RPA execution over WebSocket.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">RAG</span>
+                                <span class="tech-badge">Next.js</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: INVITACIONES -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Event Management Platform</h3>
+                            <p class="project-subtitle">WhatsApp Automation & Access Control</p>
+                            <p class="project-desc">Production-grade full-stack platform for automated WhatsApp invitations, RSVP management, and unique QR generation with anti-duplication scanning.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">WhatsApp API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: BOVEDA -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">BOVEDA</h3>
+                            <p class="project-subtitle">Personal Finance Platform</p>
+                            <p class="project-desc">Self-hosted finance manager with WebAuthn/Passkeys authentication, deployed securely via Docker, Nginx, and Cloudflare Tunnels.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Docker</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: CHATBOTNAUTA -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">CHATBOTNAUTA</h3>
+                            <p class="project-subtitle">Enterprise AI Chatbot</p>
+                            <p class="project-desc">Automated WhatsApp customer service agent for a print shop. Interprets natural language requests and generates quotes dynamically.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">WhatsApp API</span>
+                                <span class="tech-badge">OpenAI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: RESILENCIA KUBERNETES -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Microservices Resilience</h3>
+                            <p class="project-subtitle">Chaos Engineering & Observability</p>
+                            <p class="project-desc">Implementation of circuit breakers, chaos engineering (k6), and full observability on a Kubernetes cluster.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Kubernetes</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">OpenTelemetry</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 6: DocFix -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">DocFix / INEs</h3>
+                            <p class="project-subtitle">Computer Vision Document Processor</p>
+                            <p class="project-desc">Desktop app leveraging AI segmentation and OpenCV to detect, crop, and normalize ID cards for automated print layouts.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">OpenCV</span>
+                                <span class="tech-badge">rembg</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section id="expertise" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Toolbox</span>
+                    <h2 class="section-title">Expertise</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="honeycomb">
+                        <div class="hex-row">
+                            <!-- Backend -->
+                            <div class="hex">
+                                <div class="hex-inner">
+                                    <svg class="hex-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                                    <span class="hex-label">Backend</span>
+                                </div>
+                            </div>
+                            
+                            <!-- AI / ML -->
+                            <div class="hex">
+                                <div class="hex-inner">
+                                    <svg class="hex-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                                    <span class="hex-label">AI & LLMs</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Infrastructure -->
+                            <div class="hex">
+                                <div class="hex-inner">
+                                    <svg class="hex-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                                    <span class="hex-label">DevOps</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hex-row">
+                            <!-- Databases -->
+                            <div class="hex">
+                                <div class="hex-inner">
+                                    <svg class="hex-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                                    <span class="hex-label">Databases</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Security -->
+                            <div class="hex">
+                                <div class="hex-inner">
+                                    <svg class="hex-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    <span class="hex-label">Security</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hex-row">
+                            <!-- Frontend -->
+                            <div class="hex">
+                                <div class="hex-inner">
+                                    <svg class="hex-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                    <span class="hex-label">Frontend</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-cloud" style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); justify-content: center; margin-top: var(--spacing-sm); max-width: 750px; margin-left: auto; margin-right: auto;">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Next.js</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">SQLAlchemy</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">Kubernetes</span>
+                    <span class="tech-badge">Linux</span>
+                    <span class="tech-badge">OpenTelemetry</span>
+                    <span class="tech-badge">WebAuthn</span>
+                    <span class="tech-badge">RAG</span>
+                    <span class="tech-badge">CI/CD</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <span class="footer-brand">Azael Fajardo</span>
+            <div class="footer-social">
+                <a href="#" class="icon-btn icon-resume" aria-label="Download Resume" data-tooltip="Resume">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/angel-azael-fajardo-espino-850b8642b/" class="icon-btn icon-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="LinkedIn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Azael Fajardo. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- Sakura Background SVG (Bottom Right) -->
+    <div class="sakura-container">
+        <svg width="500" height="500" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main branch -->
+            <path d="M200 190 C 175 170, 155 145, 130 120 C 115 105, 95 90, 70 75 C 55 65, 35 55, 10 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+            <!-- Secondary branches -->
+            <path d="M130 120 C 120 100, 105 85, 85 60" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.3"/>
+            <path d="M130 120 C 140 140, 120 155, 100 165" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.25"/>
+            <path d="M70 75 C 55 90, 40 100, 25 115" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+            <path d="M85 60 C 75 45, 60 35, 45 25" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.2"/>
+
+            <!-- 5-petal sakura flowers -->
+            <g fill="currentColor" opacity="0.6">
+                <!-- Flower at branch junction -->
+                <circle cx="130" cy="120" r="4"/>
+                <ellipse cx="126" cy="115" rx="3" ry="5" transform="rotate(-30 126 115)"/>
+                <ellipse cx="135" cy="115" rx="3" ry="5" transform="rotate(30 135 115)"/>
+                <ellipse cx="137" cy="123" rx="3" ry="5" transform="rotate(70 137 123)"/>
+                <ellipse cx="124" cy="125" rx="3" ry="5" transform="rotate(-70 124 125)"/>
+                <ellipse cx="130" cy="127" rx="3" ry="5"/>
+            </g>
+            <g fill="currentColor" opacity="0.5">
+                <!-- Flower on secondary branch -->
+                <circle cx="85" cy="60" r="3"/>
+                <ellipse cx="82" cy="56" rx="2.5" ry="4" transform="rotate(-25 82 56)"/>
+                <ellipse cx="89" cy="56" rx="2.5" ry="4" transform="rotate(25 89 56)"/>
+                <ellipse cx="90" cy="62" rx="2.5" ry="4" transform="rotate(65 90 62)"/>
+                <ellipse cx="81" cy="63" rx="2.5" ry="4" transform="rotate(-65 81 63)"/>
+                <ellipse cx="85" cy="65" rx="2.5" ry="4"/>
+            </g>
+            <g fill="currentColor" opacity="0.45">
+                <!-- Flower on lower branch -->
+                <circle cx="100" cy="165" r="3.5"/>
+                <ellipse cx="97" cy="161" rx="2.5" ry="4.5" transform="rotate(-20 97 161)"/>
+                <ellipse cx="104" cy="161" rx="2.5" ry="4.5" transform="rotate(20 104 161)"/>
+                <ellipse cx="105" cy="168" rx="2.5" ry="4.5" transform="rotate(60 105 168)"/>
+                <ellipse cx="96" cy="169" rx="2.5" ry="4.5" transform="rotate(-60 96 169)"/>
+            </g>
+            <g fill="currentColor" opacity="0.4">
+                <!-- Small flower on tip -->
+                <circle cx="45" cy="25" r="2.5"/>
+                <ellipse cx="43" cy="22" rx="2" ry="3.5" transform="rotate(-30 43 22)"/>
+                <ellipse cx="48" cy="22" rx="2" ry="3.5" transform="rotate(30 48 22)"/>
+                <ellipse cx="49" cy="27" rx="2" ry="3.5" transform="rotate(70 49 27)"/>
+                <ellipse cx="42" cy="27" rx="2" ry="3.5" transform="rotate(-70 42 27)"/>
+            </g>
+            <g fill="currentColor" opacity="0.35">
+                <!-- Small flower near base -->
+                <circle cx="25" cy="115" r="2.5"/>
+                <ellipse cx="23" cy="112" rx="2" ry="3" transform="rotate(-35 23 112)"/>
+                <ellipse cx="28" cy="112" rx="2" ry="3" transform="rotate(35 28 112)"/>
+                <ellipse cx="28" cy="118" rx="2" ry="3" transform="rotate(75 28 118)"/>
+                <ellipse cx="22" cy="118" rx="2" ry="3" transform="rotate(-75 22 118)"/>
+            </g>
+
+            <!-- Falling petals -->
+            <g fill="currentColor" opacity="0.3">
+                <ellipse cx="50" cy="20" rx="2" ry="4" transform="rotate(45 50 20)"/>
+                <ellipse cx="110" cy="45" rx="1.5" ry="3" transform="rotate(-30 110 45)"/>
+                <ellipse cx="155" cy="90" rx="2" ry="3.5" transform="rotate(60 155 90)"/>
+                <ellipse cx="30" cy="150" rx="1.5" ry="3" transform="rotate(-45 30 150)"/>
+                <ellipse cx="75" cy="140" rx="1.5" ry="3" transform="rotate(20 75 140)"/>
+                <ellipse cx="160" cy="140" rx="2" ry="3" transform="rotate(-55 160 140)"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-resume-title">Resume</h3>
+                <button class="btn-icon" data-close-modal aria-label="Close Modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="resume-iframe" src="" width="100%" height="100%" style="border: none; min-height: 70vh;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Animations & Micro-interactions
+   ========================================================================== */
+
+/* Sakura Background Container (from TAKARA) */
+.sakura-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.20;
+  color: #A3A3A3;
+}
+
+[data-theme="light"] .sakura-container {
+  opacity: 0.30;
+  color: #78716C;
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Base Styles & Typography Reset
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   SEIGAIHA PATTERN (Exact from TAKARA)
+   ========================================================================== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-color: var(--bg-primary);
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cg stroke='%23ffffff' stroke-width='1.5' stroke-opacity='0.03' fill='%230B0B0B'%3E%3Cpath d='M 0 30 A 30 30 0 0 1 60 30' /%3E%3Cpath d='M 8 30 A 22 22 0 0 1 52 30' /%3E%3Cpath d='M 16 30 A 14 14 0 0 1 44 30' /%3E%3Cpath d='M 24 30 A 6 6 0 0 1 36 30' /%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cg stroke='%23ffffff' stroke-width='1.5' stroke-opacity='0.03' fill='%230B0B0B'%3E%3Cpath d='M 0 30 A 30 30 0 0 1 60 30' /%3E%3Cpath d='M 8 30 A 22 22 0 0 1 52 30' /%3E%3Cpath d='M 16 30 A 14 14 0 0 1 44 30' /%3E%3Cpath d='M 24 30 A 6 6 0 0 1 36 30' /%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 30px;
+  background-position: 0 0, 30px 15px;
+}
+
+/* Light mode: use dark strokes on light fill */
+[data-theme="light"] body::before {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cg stroke='%23000000' stroke-width='1.5' stroke-opacity='0.06' fill='%23FAF8F5'%3E%3Cpath d='M 0 30 A 30 30 0 0 1 60 30' /%3E%3Cpath d='M 8 30 A 22 22 0 0 1 52 30' /%3E%3Cpath d='M 16 30 A 14 14 0 0 1 44 30' /%3E%3Cpath d='M 24 30 A 6 6 0 0 1 36 30' /%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cg stroke='%23000000' stroke-width='1.5' stroke-opacity='0.06' fill='%23FAF8F5'%3E%3Cpath d='M 0 30 A 30 30 0 0 1 60 30' /%3E%3Cpath d='M 8 30 A 22 22 0 0 1 52 30' /%3E%3Cpath d='M 16 30 A 14 14 0 0 1 44 30' /%3E%3Cpath d='M 24 30 A 6 6 0 0 1 36 30' /%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 30px;
+  background-position: 0 0, 30px 15px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent-gold);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.05em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-gold);
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent-gold);
+  outline-offset: 4px;
+}
