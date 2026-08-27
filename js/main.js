@@ -1,7 +1,9 @@
 import { initTheme } from './theme.js';
+import { initLanguage } from './i18n.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initLanguage();
   initScrollSpy();
   initExperienceCarousel();
 });
