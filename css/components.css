@@ -384,19 +384,27 @@
 
 .honeycomb {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  max-width: 900px;
   margin: 0 auto;
   padding: 0;
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -38px;
+}
+
+.hex-row:last-child {
+  margin-bottom: 0;
 }
 
 .hex {
   position: relative;
   width: 140px;
   height: 160px;
-  margin: -10px 5px; /* Negative margin to interlock */
+  margin: 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -460,17 +468,6 @@
   color: var(--text-primary);
 }
 
-/* Adjust rows to interlock nicely */
-.honeycomb::before {
-  content: "";
-  width: calc(140px / 2 + 5px);
-  float: left;
-  height: 100%;
-  shape-outside: repeating-linear-gradient(
-    #0000 0 calc(160px - 20px),
-    #000 0 160px
-  );
-}
 
 /* Fallback simple grid if shape-outside doesn't work perfectly in all browsers */
 @supports not (clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)) {
