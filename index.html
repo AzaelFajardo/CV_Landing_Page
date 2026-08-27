@@ -42,7 +42,7 @@
                     <!-- Moon Icon -->
                     <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="btn btn-nav-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+                <a href="#" class="btn btn-nav-resume">View Resume</a>
             </div>
         </div>
     </header>
@@ -63,7 +63,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="icon-btn icon-resume" target="_blank" rel="noopener noreferrer" aria-label="Download Resume" data-tooltip="Download Resume">
+                    <a href="#" class="icon-btn icon-resume" aria-label="Download Resume" data-tooltip="Download Resume">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     </a>
                     <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
@@ -345,7 +345,7 @@
         <div class="container footer-container">
             <span class="footer-brand">Azael Fajardo</span>
             <div class="footer-social">
-                <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="icon-btn icon-resume" target="_blank" rel="noopener noreferrer" aria-label="Download Resume" data-tooltip="Resume">
+                <a href="#" class="icon-btn icon-resume" aria-label="Download Resume" data-tooltip="Resume">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 </a>
                 <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
@@ -425,6 +425,22 @@
                 <ellipse cx="160" cy="140" rx="2" ry="3" transform="rotate(-55 160 140)"/>
             </g>
         </svg>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-resume-title">Resume</h3>
+                <button class="btn-icon" data-close-modal aria-label="Close Modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="resume-iframe" src="" width="100%" height="100%" style="border: none; min-height: 70vh;"></iframe>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="js/main.js"></script>

@@ -8,6 +8,7 @@ const translations = {
   en: {
     nav: ["About", "Experience", "Projects", "Expertise"],
     resumeBtn: "View Resume",
+    modalResumeTitle: "Resume",
     hero: {
       subtitle: "Software Engineer",
       title: "Building Systems That Work",
@@ -95,6 +96,7 @@ const translations = {
   es: {
     nav: ["Sobre mí", "Experiencia", "Proyectos", "Especialidad"],
     resumeBtn: "Ver CV",
+    modalResumeTitle: "Currículum Vitae",
     hero: {
       subtitle: "Ingeniero de Software",
       title: "Construyendo Sistemas Que Funcionan",
@@ -294,4 +296,8 @@ function applyLanguage(lang) {
       label.textContent = t.expertise.hexLabels[index];
     }
   });
+
+  // Modal Resume
+  const modalResumeTitle = document.getElementById('modal-resume-title');
+  if (modalResumeTitle) modalResumeTitle.textContent = t.modalResumeTitle;
 }
