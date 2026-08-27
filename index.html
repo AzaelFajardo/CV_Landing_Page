@@ -27,7 +27,7 @@
 
             <nav class="nav-menu" id="nav-menu" aria-label="Primary">
                 <a class="nav-link active" href="#about">About</a>
-                <a class="nav-link" href="#experience">Experience</a>
+                <a class="nav-link disabled" href="#experience">Experience</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#expertise">Expertise</a>
             </nav>
@@ -160,9 +160,95 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-kicker">Portfolio</span>
-                    <h2 class="section-title">Projects</h2>
+                    <h2 class="section-title">Featured Projects</h2>
                 </div>
-                <p class="section-placeholder">Selected work will be showcased here shortly.</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: ARGOS -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">A.R.G.O.S.</h3>
+                            <p class="project-subtitle">AI Multi-Agent Personal Assistant</p>
+                            <p class="project-desc">Multi-agent AI system with a multi-provider LLM router, long-term memory via RAG & embeddings, and remote RPA execution over WebSocket.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">RAG</span>
+                                <span class="tech-badge">Next.js</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: INVITACIONES -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Event Management Platform</h3>
+                            <p class="project-subtitle">WhatsApp Automation & Access Control</p>
+                            <p class="project-desc">Production-grade full-stack platform for automated WhatsApp invitations, RSVP management, and unique QR generation with anti-duplication scanning.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">WhatsApp API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: BOVEDA -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">BOVEDA</h3>
+                            <p class="project-subtitle">Personal Finance Platform</p>
+                            <p class="project-desc">Self-hosted finance manager with WebAuthn/Passkeys authentication, deployed securely via Docker, Nginx, and Cloudflare Tunnels.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Docker</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: CHATBOTNAUTA -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">CHATBOTNAUTA</h3>
+                            <p class="project-subtitle">Enterprise AI Chatbot</p>
+                            <p class="project-desc">Automated WhatsApp customer service agent for a print shop. Interprets natural language requests and generates quotes dynamically.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">WhatsApp API</span>
+                                <span class="tech-badge">OpenAI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: RESILENCIA KUBERNETES -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Microservices Resilience</h3>
+                            <p class="project-subtitle">Chaos Engineering & Observability</p>
+                            <p class="project-desc">Implementation of circuit breakers, chaos engineering (k6), and full observability on a Kubernetes cluster.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Kubernetes</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">OpenTelemetry</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 6: DocFix -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">DocFix / INEs</h3>
+                            <p class="project-subtitle">Computer Vision Document Processor</p>
+                            <p class="project-desc">Desktop app leveraging AI segmentation and OpenCV to detect, crop, and normalize ID cards for automated print layouts.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">OpenCV</span>
+                                <span class="tech-badge">rembg</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -191,6 +277,7 @@
             </div>
             <p class="footer-copy">&copy; 2026 Azael Fajardo. All rights reserved.</p>
         </div>
+
     </footer>
 
     <!-- Sakura Background SVG (Bottom Right, from TAKARA) -->
