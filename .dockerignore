@@ -1,0 +1,12 @@
+.git
+.gitignore
+.env
+.env.example
+.dockerignore
+.agents
+como_trabajar.md
+README.md
+Dockerfile
+docker-compose.yml
+nginx.conf
+*.md

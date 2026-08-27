@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    container_name: portfolio-web
+    restart: unless-stopped
+    networks:
+      - portfolio-net
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: portfolio-tunnel
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARED_TUNNEL_TOKEN}
+    depends_on:
+      - web
+    networks:
+      - portfolio-net
+
+networks:
+  portfolio-net:
+    driver: bridge
