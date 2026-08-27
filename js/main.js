@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initExperienceCarousel();
   initResumeModal();
+  initResumeDownload();
   initScrollReveal();
   initSakuraParallax();
 });
@@ -99,7 +100,7 @@ function initResumeModal() {
   const iframe = document.getElementById('resume-iframe');
   if (!modal || !iframe) return;
 
-  const openBtns = document.querySelectorAll('.btn-nav-resume, .icon-resume');
+  const openBtns = document.querySelectorAll('.btn-nav-resume'); // Only nav button opens modal
   const closeBtns = document.querySelectorAll('[data-close-modal]');
 
   const openModal = (e) => {
@@ -123,6 +124,29 @@ function initResumeModal() {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
     }
+  });
+}
+
+/**
+ * Resume Download Logic
+ * Triggers direct download for icon buttons
+ */
+function initResumeDownload() {
+  const downloadBtns = document.querySelectorAll('.icon-resume');
+  downloadBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentLang = document.documentElement.getAttribute('lang') || 'en';
+      const pdfFile = currentLang === 'en' ? 'docs/CV_Angel_Fajardo(english).pdf' : 'docs/CV_Angel_Fajardo(español).pdf';
+      const fileName = currentLang === 'en' ? 'CV_Angel_Fajardo_EN.pdf' : 'CV_Angel_Fajardo_ES.pdf';
+      
+      const link = document.createElement('a');
+      link.href = pdfFile;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
   });
 }
 
