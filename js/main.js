@@ -1,9 +1,12 @@
 import { initTheme } from './theme.js';
+import { initLanguage } from './i18n.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initLanguage();
   initScrollSpy();
   initExperienceCarousel();
+  initResumeModal();
 });
 
 /**
@@ -73,4 +76,40 @@ function initExperienceCarousel() {
   window.addEventListener('resize', updateButtons);
 
   updateButtons();
+}
+
+/**
+ * Resume Modal Logic
+ * Dynamically loads the english or spanish PDF based on current language.
+ */
+function initResumeModal() {
+  const modal = document.getElementById('resume-modal');
+  const iframe = document.getElementById('resume-iframe');
+  if (!modal || !iframe) return;
+
+  const openBtns = document.querySelectorAll('.btn-nav-resume, .icon-resume');
+  const closeBtns = document.querySelectorAll('[data-close-modal]');
+
+  const openModal = (e) => {
+    e.preventDefault();
+    const currentLang = document.documentElement.getAttribute('lang') || 'en';
+    const pdfFile = currentLang === 'en' ? 'docs/CV_Angel_Fajardo(english).pdf' : 'docs/CV_Angel_Fajardo(español).pdf';
+    iframe.src = pdfFile;
+    modal.classList.add('active');
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    setTimeout(() => { iframe.src = ''; }, 300); // clear src after animation
+  };
+
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+  // Also close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 }
