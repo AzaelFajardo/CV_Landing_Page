@@ -138,7 +138,7 @@ function initResumeDownload() {
       e.preventDefault();
       const currentLang = document.documentElement.getAttribute('lang') || 'en';
       const pdfFile = currentLang === 'en' ? 'docs/CV_Angel_Fajardo(english).pdf' : 'docs/CV_Angel_Fajardo(español).pdf';
-      const fileName = currentLang === 'en' ? 'CV_Angel_Fajardo_EN.pdf' : 'CV_Angel_Fajardo_ES.pdf';
+      const fileName = 'CV_Angel_Fajardo.pdf';
       
       const link = document.createElement('a');
       link.href = pdfFile;
