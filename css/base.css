@@ -21,6 +21,21 @@ html {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
 body {
   min-height: 100vh;
   position: relative;
@@ -71,7 +86,7 @@ h1 {
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   margin-bottom: var(--spacing-lg);
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 h3 {
@@ -95,10 +110,10 @@ a {
 }
 
 a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 :focus-visible {
-  outline: 1px solid var(--accent-gold);
+  outline: 1px solid var(--accent-primary);
   outline-offset: 4px;
 }

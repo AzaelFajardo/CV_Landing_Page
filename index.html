@@ -27,7 +27,7 @@
 
             <nav class="nav-menu" id="nav-menu" aria-label="Primary">
                 <a class="nav-link active" href="#about">About</a>
-                <a class="nav-link disabled" href="#experience">Experience</a>
+                <a class="nav-link" href="#experience">Experience</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#expertise">Expertise</a>
             </nav>
@@ -49,7 +49,7 @@
 
     <main class="main-content">
         <!-- About / Hero -->
-        <section id="about" class="section hero-section">
+        <section id="about" class="section hero-section reveal">
             <div class="container">
                 <div class="hero-subtitle">Software Engineer</div>
 
@@ -77,7 +77,7 @@
         </section>
 
         <!-- Experience -->
-        <section id="experience" class="section">
+        <section id="experience" class="section reveal">
             <div class="container-fluid">
                 <div class="section-header">
                     <span class="section-kicker">Career Path</span>
@@ -159,7 +159,7 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="section">
+        <section id="projects" class="section reveal">
             <div class="container">
                 <div class="section-header">
                     <span class="section-kicker">Portfolio</span>
@@ -256,7 +256,7 @@
         </section>
 
         <!-- Expertise -->
-        <section id="expertise" class="section">
+        <section id="expertise" class="section reveal">
             <div class="container">
                 <div class="section-header">
                     <span class="section-kicker">Toolbox</span>
@@ -320,22 +320,40 @@
                     </div>
                 </div>
 
-                <div class="tech-cloud" style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); justify-content: center; margin-top: var(--spacing-sm); max-width: 750px; margin-left: auto; margin-right: auto;">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">TypeScript</span>
-                    <span class="tech-badge">FastAPI</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">Next.js</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">SQLAlchemy</span>
-                    <span class="tech-badge">Docker</span>
-                    <span class="tech-badge">Kubernetes</span>
-                    <span class="tech-badge">Linux</span>
-                    <span class="tech-badge">OpenTelemetry</span>
-                    <span class="tech-badge">WebAuthn</span>
-                    <span class="tech-badge">RAG</span>
-                    <span class="tech-badge">CI/CD</span>
+                <div class="tech-ticker-container">
+                    <div class="tech-ticker">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">SQLAlchemy</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Kubernetes</span>
+                        <span class="tech-badge">Linux</span>
+                        <span class="tech-badge">OpenTelemetry</span>
+                        <span class="tech-badge">WebAuthn</span>
+                        <span class="tech-badge">RAG</span>
+                        <span class="tech-badge">CI/CD</span>
+                        <!-- Duplicate for infinite scrolling -->
+                        <span class="tech-badge" aria-hidden="true">Python</span>
+                        <span class="tech-badge" aria-hidden="true">TypeScript</span>
+                        <span class="tech-badge" aria-hidden="true">FastAPI</span>
+                        <span class="tech-badge" aria-hidden="true">Node.js</span>
+                        <span class="tech-badge" aria-hidden="true">Next.js</span>
+                        <span class="tech-badge" aria-hidden="true">React</span>
+                        <span class="tech-badge" aria-hidden="true">PostgreSQL</span>
+                        <span class="tech-badge" aria-hidden="true">SQLAlchemy</span>
+                        <span class="tech-badge" aria-hidden="true">Docker</span>
+                        <span class="tech-badge" aria-hidden="true">Kubernetes</span>
+                        <span class="tech-badge" aria-hidden="true">Linux</span>
+                        <span class="tech-badge" aria-hidden="true">OpenTelemetry</span>
+                        <span class="tech-badge" aria-hidden="true">WebAuthn</span>
+                        <span class="tech-badge" aria-hidden="true">RAG</span>
+                        <span class="tech-badge" aria-hidden="true">CI/CD</span>
+                    </div>
                 </div>
             </div>
         </section>

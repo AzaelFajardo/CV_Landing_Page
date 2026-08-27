@@ -8,6 +8,7 @@ const translations = {
   en: {
     nav: ["About", "Experience", "Projects", "Expertise"],
     resumeBtn: "View Resume",
+    downloadResume: "Download Resume",
     modalResumeTitle: "Resume",
     hero: {
       subtitle: "Software Engineer",
@@ -96,6 +97,7 @@ const translations = {
   es: {
     nav: ["Sobre mí", "Experiencia", "Proyectos", "Especialidad"],
     resumeBtn: "Ver CV",
+    downloadResume: "Descargar CV",
     modalResumeTitle: "Currículum Vitae",
     hero: {
       subtitle: "Ingeniero de Software",
@@ -300,4 +302,11 @@ function applyLanguage(lang) {
   // Modal Resume
   const modalResumeTitle = document.getElementById('modal-resume-title');
   if (modalResumeTitle) modalResumeTitle.textContent = t.modalResumeTitle;
+
+  // Icon Resume Tooltip and Aria Label
+  const downloadResumeBtns = document.querySelectorAll('.icon-resume');
+  downloadResumeBtns.forEach(btn => {
+    btn.setAttribute('data-tooltip', t.downloadResume);
+    btn.setAttribute('aria-label', t.downloadResume);
+  });
 }

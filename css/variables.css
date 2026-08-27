@@ -21,16 +21,16 @@
   --text-inverse: #111111;
 
   /* Accent & Brand Colors */
-  --accent-gold: #D4AF37;
-  --accent-gold-hover: #b8972e;
+  --accent-primary: #0ea5e9;
+  --accent-primary-hover: #38bdf8;
 
   /* Social Brand Accents */
   --accent-purple: #8B5CF6;
   --accent-blue: #0A66C2;
 
   /* Gradients & Glows */
-  --glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
-  --glow-gold-hover: 0 0 30px rgba(212, 175, 55, 0.5);
+  --glow-primary: 0 0 20px rgba(14, 165, 233, 0.3);
+  --glow-primary-hover: 0 0 30px rgba(14, 165, 233, 0.5);
   --glow-purple: 0 0 20px rgba(139, 92, 246, 0.45);
   --glow-purple-hover: 0 0 28px rgba(139, 92, 246, 0.6);
   --glow-blue: 0 0 20px rgba(10, 102, 194, 0.45);
@@ -80,10 +80,10 @@
   --text-secondary: #4B5563;
   --text-inverse: #FFFFFF;
 
-  --accent-gold: #B46A00; /* Deep elegant golden bronze for maximum readability on light bg */
-  --accent-gold-hover: #8C5300;
+  --accent-primary: #0284c7; /* Electric Cyan for light mode */
+  --accent-primary-hover: #0369a1;
   
-  --glow-gold: 0 4px 15px rgba(180, 106, 0, 0.15);
-  --glow-gold-hover: 0 6px 20px rgba(180, 106, 0, 0.25);
+  --glow-primary: 0 4px 15px rgba(2, 132, 199, 0.15);
+  --glow-primary-hover: 0 6px 20px rgba(2, 132, 199, 0.25);
   --glow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }

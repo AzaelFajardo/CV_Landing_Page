@@ -18,6 +18,51 @@
   color: #78716C;
 }
 
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay modifiers for stagger effects */
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+
+/* Infinite Ticker Animation */
+.tech-ticker-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: var(--spacing-xl) auto 0;
+  overflow: hidden;
+  position: relative;
+  /* Fading edges */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.tech-ticker {
+  display: flex;
+  width: max-content;
+  gap: var(--spacing-sm);
+  animation: scroll-ticker 30s linear infinite;
+}
+
+.tech-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - (var(--spacing-sm) / 2))); }
+}
+
 /* Reduced Motion for Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
