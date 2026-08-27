@@ -10,8 +10,10 @@
   --bg-surface-3: #202020;
   
   --bg-glass: rgba(11, 11, 11, 0.7);
+  --bg-glass-medium: rgba(17, 17, 17, 0.65);
   
   --border-subtle: #2A2A2A;
+  --border-glass: rgba(255, 255, 255, 0.05);
   
   /* Typography Colors */
   --text-primary: #FFFFFF;
@@ -33,6 +35,7 @@
   --glow-purple-hover: 0 0 28px rgba(139, 92, 246, 0.6);
   --glow-blue: 0 0 20px rgba(10, 102, 194, 0.45);
   --glow-blue-hover: 0 0 28px rgba(10, 102, 194, 0.6);
+  --glow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
   /* Typography */
   --font-serif: 'Cinzel', serif;
@@ -60,24 +63,27 @@
   --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Mode Overrides (Warm, Pleasant Ivory/Cream) */
+/* Light Mode Overrides (Sleek Slate & Crisp White) */
 [data-theme="light"] {
-  --bg-primary: #FAF8F5; /* Warm off-white */
-  --bg-surface-1: #FFFFFF;
-  --bg-surface-2: #F0EBE1; /* Soft cream for cards */
-  --bg-surface-3: #E3DCCF;
+  --bg-primary: #F3F4F6; /* Soft cool gray - noticeably pleasant, not stark white */
+  --bg-surface-1: #FFFFFF; /* Pure white for high contrast cards */
+  --bg-surface-2: #E5E7EB; /* Subtle gray for tags and hovering */
+  --bg-surface-3: #D1D5DB; /* Deeper gray for dividers/borders */
   
-  --bg-glass: rgba(250, 248, 245, 0.85);
+  --bg-glass: rgba(243, 244, 246, 0.85);
+  --bg-glass-medium: rgba(255, 255, 255, 0.65);
   
-  --border-subtle: #E0D9CD;
+  --border-subtle: #D1D5DB;
+  --border-glass: rgba(0, 0, 0, 0.08);
   
-  --text-primary: #1C1917; /* Soft dark stone */
-  --text-secondary: #57534E;
+  --text-primary: #111827; /* High contrast slate/gray - highly legible */
+  --text-secondary: #4B5563;
   --text-inverse: #FFFFFF;
 
-  --accent-gold: #B48600; /* Slightly darker gold for contrast on light */
-  --accent-gold-hover: #966F00;
+  --accent-gold: #B46A00; /* Deep elegant golden bronze for maximum readability on light bg */
+  --accent-gold-hover: #8C5300;
   
-  --glow-gold: 0 4px 15px rgba(180, 134, 0, 0.2);
-  --glow-gold-hover: 0 6px 20px rgba(180, 134, 0, 0.35);
+  --glow-gold: 0 4px 15px rgba(180, 106, 0, 0.15);
+  --glow-gold-hover: 0 6px 20px rgba(180, 106, 0, 0.25);
+  --glow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }
