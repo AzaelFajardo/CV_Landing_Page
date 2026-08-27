@@ -114,7 +114,7 @@
 .section {
   padding-top: var(--spacing-3xl);
   padding-bottom: var(--spacing-4xl);
-  scroll-margin-top: var(--header-height);
+  scroll-margin-top: calc(var(--header-height) - 3.9rem);
 }
 
 .section-header {
