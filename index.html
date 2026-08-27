@@ -39,7 +39,7 @@
                     <!-- Moon Icon -->
                     <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="btn btn-nav-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
             </div>
         </div>
     </header>
@@ -342,6 +342,9 @@
         <div class="container footer-container">
             <span class="footer-brand">Azael Fajardo</span>
             <div class="footer-social">
+                <a href="docs/CV%20Maestro%20%E2%80%94%20%C3%81ngel%20Azael%20Fajardo%20Espino.md" class="icon-btn icon-resume" target="_blank" rel="noopener noreferrer" aria-label="Download Resume" data-tooltip="Resume">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
                 <a href="https://github.com/AzaelFajardo" class="icon-btn icon-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
@@ -354,34 +357,69 @@
 
     </footer>
 
-    <!-- Sakura Background SVG (Bottom Right, from TAKARA) -->
+    <!-- Sakura Background SVG (Bottom Right) -->
     <div class="sakura-container">
-        <svg width="600" height="600" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Main asymmetric branch (bonsai style) -->
-            <path d="M220 180 C 180 150, 150 120, 100 100 C 80 85, 50 75, 10 50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
-            <path d="M150 120 C 130 90, 100 70, 70 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-            <path d="M100 100 C 80 120, 50 130, 20 140" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <svg width="500" height="500" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main branch -->
+            <path d="M200 190 C 175 170, 155 145, 130 120 C 115 105, 95 90, 70 75 C 55 65, 35 55, 10 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+            <!-- Secondary branches -->
+            <path d="M130 120 C 120 100, 105 85, 85 60" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.3"/>
+            <path d="M130 120 C 140 140, 120 155, 100 165" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.25"/>
+            <path d="M70 75 C 55 90, 40 100, 25 115" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+            <path d="M85 60 C 75 45, 60 35, 45 25" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.2"/>
 
-            <!-- Main flowers -->
-            <g fill="currentColor" opacity="0.8">
-                <circle cx="100" cy="100" r="3.5" />
-                <circle cx="70" cy="40" r="2.5" />
-                <circle cx="20" cy="140" r="3" />
-                <circle cx="50" cy="80" r="4" />
-                <circle cx="130" cy="140" r="2.5" />
-                <circle cx="160" cy="70" r="3.5" />
-                <circle cx="10" cy="50" r="2" />
+            <!-- 5-petal sakura flowers -->
+            <g fill="currentColor" opacity="0.6">
+                <!-- Flower at branch junction -->
+                <circle cx="130" cy="120" r="4"/>
+                <ellipse cx="126" cy="115" rx="3" ry="5" transform="rotate(-30 126 115)"/>
+                <ellipse cx="135" cy="115" rx="3" ry="5" transform="rotate(30 135 115)"/>
+                <ellipse cx="137" cy="123" rx="3" ry="5" transform="rotate(70 137 123)"/>
+                <ellipse cx="124" cy="125" rx="3" ry="5" transform="rotate(-70 124 125)"/>
+                <ellipse cx="130" cy="127" rx="3" ry="5"/>
+            </g>
+            <g fill="currentColor" opacity="0.5">
+                <!-- Flower on secondary branch -->
+                <circle cx="85" cy="60" r="3"/>
+                <ellipse cx="82" cy="56" rx="2.5" ry="4" transform="rotate(-25 82 56)"/>
+                <ellipse cx="89" cy="56" rx="2.5" ry="4" transform="rotate(25 89 56)"/>
+                <ellipse cx="90" cy="62" rx="2.5" ry="4" transform="rotate(65 90 62)"/>
+                <ellipse cx="81" cy="63" rx="2.5" ry="4" transform="rotate(-65 81 63)"/>
+                <ellipse cx="85" cy="65" rx="2.5" ry="4"/>
+            </g>
+            <g fill="currentColor" opacity="0.45">
+                <!-- Flower on lower branch -->
+                <circle cx="100" cy="165" r="3.5"/>
+                <ellipse cx="97" cy="161" rx="2.5" ry="4.5" transform="rotate(-20 97 161)"/>
+                <ellipse cx="104" cy="161" rx="2.5" ry="4.5" transform="rotate(20 104 161)"/>
+                <ellipse cx="105" cy="168" rx="2.5" ry="4.5" transform="rotate(60 105 168)"/>
+                <ellipse cx="96" cy="169" rx="2.5" ry="4.5" transform="rotate(-60 96 169)"/>
+            </g>
+            <g fill="currentColor" opacity="0.4">
+                <!-- Small flower on tip -->
+                <circle cx="45" cy="25" r="2.5"/>
+                <ellipse cx="43" cy="22" rx="2" ry="3.5" transform="rotate(-30 43 22)"/>
+                <ellipse cx="48" cy="22" rx="2" ry="3.5" transform="rotate(30 48 22)"/>
+                <ellipse cx="49" cy="27" rx="2" ry="3.5" transform="rotate(70 49 27)"/>
+                <ellipse cx="42" cy="27" rx="2" ry="3.5" transform="rotate(-70 42 27)"/>
+            </g>
+            <g fill="currentColor" opacity="0.35">
+                <!-- Small flower near base -->
+                <circle cx="25" cy="115" r="2.5"/>
+                <ellipse cx="23" cy="112" rx="2" ry="3" transform="rotate(-35 23 112)"/>
+                <ellipse cx="28" cy="112" rx="2" ry="3" transform="rotate(35 28 112)"/>
+                <ellipse cx="28" cy="118" rx="2" ry="3" transform="rotate(75 28 118)"/>
+                <ellipse cx="22" cy="118" rx="2" ry="3" transform="rotate(-75 22 118)"/>
             </g>
 
             <!-- Falling petals -->
-            <g fill="currentColor" opacity="0.5">
-                <path d="M 40 20 Q 42 17 45 20 Q 42 23 40 20 Z" />
-                <path d="M 80 10 Q 82 7 85 10 Q 82 13 80 10 Z" />
-                <path d="M 120 40 Q 123 37 125 40 Q 123 43 120 40 Z" />
-                <path d="M 10 100 Q 12 97 15 100 Q 12 103 10 100 Z" />
-                <path d="M 30 180 Q 32 177 35 180 Q 32 183 30 180 Z" />
-                <path d="M 160 100 Q 163 97 165 100 Q 163 103 160 100 Z" />
-                <path d="M 90 160 Q 92 157 95 160 Q 92 163 90 160 Z" />
+            <g fill="currentColor" opacity="0.3">
+                <ellipse cx="50" cy="20" rx="2" ry="4" transform="rotate(45 50 20)"/>
+                <ellipse cx="110" cy="45" rx="1.5" ry="3" transform="rotate(-30 110 45)"/>
+                <ellipse cx="155" cy="90" rx="2" ry="3.5" transform="rotate(60 155 90)"/>
+                <ellipse cx="30" cy="150" rx="1.5" ry="3" transform="rotate(-45 30 150)"/>
+                <ellipse cx="75" cy="140" rx="1.5" ry="3" transform="rotate(20 75 140)"/>
+                <ellipse cx="160" cy="140" rx="2" ry="3" transform="rotate(-55 160 140)"/>
             </g>
         </svg>
     </div>
