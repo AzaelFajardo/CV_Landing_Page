@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initExperienceCarousel();
   initResumeModal();
+  initScrollReveal();
+  initSakuraParallax();
 });
 
 /**
@@ -59,9 +61,19 @@ function initExperienceCarousel() {
   };
 
   const updateButtons = () => {
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    prev.disabled = track.scrollLeft <= 1;
-    next.disabled = track.scrollLeft >= maxScroll - 1;
+    if (!track) return;
+    // Hide controls if there's no overflow
+    if (track.scrollWidth <= track.clientWidth) {
+      if (prev) prev.style.display = 'none';
+      if (next) next.style.display = 'none';
+      return;
+    } else {
+      if (prev) prev.style.display = '';
+      if (next) next.style.display = '';
+    }
+
+    if (prev) prev.disabled = track.scrollLeft <= 0;
+    if (next) next.disabled = track.scrollLeft >= (track.scrollWidth - track.clientWidth - 1);
   };
 
   prev.addEventListener('click', () => {
@@ -111,5 +123,42 @@ function initResumeModal() {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
     }
+  });
+}
+
+/**
+ * Scroll Reveal Animations
+ */
+function initScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (reveals.length === 0) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Optional: Stop observing once revealed
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  reveals.forEach(reveal => observer.observe(reveal));
+}
+
+/**
+ * Sakura Background Parallax
+ */
+function initSakuraParallax() {
+  const sakura = document.querySelector('.sakura-container');
+  if (!sakura) return;
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (window.innerWidth - e.pageX) / 100;
+    const y = (window.innerHeight - e.pageY) / 100;
+    sakura.style.transform = `translate(${x}px, ${y}px)`;
   });
 }
